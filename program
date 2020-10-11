@@ -1,0 +1,34 @@
+import pandas as pd 
+data = { 'Goodies': ['Fitbit Plus', 'IPods', 'MI Band', 'Cult Pass', 'Macbook Pro', 'Digital Camera', 'Alexa', 'Sandwich Toaster', 'Microwave Oven', 'Scale'], 'Price': 
+         [7980, 22349, 999, 2799, 229900, 11101, 9999, 2195, 9800, 4999]} 
+df = pd.DataFrame(data, columns =['Goodies', 'Price']) 
+print(df) 
+ 
+print(" ") 
+M = int(input('Number of employees: ')) 
+print(" ") 
+N = df.head(M) 
+
+d = N.to_dict() 
+
+ 
+print('Here are the goodies that are selected for distribution are: ') 
+
+dff = pd.DataFrame(d, columns = ['Goodies', 'Price']) 
+print(dff) 
+
+Largest = dff['Price'][dff['Price'].idxmax()] 
+Smallest = dff['Price'][dff['Price'].idxmin()] 
+ 
+# Printing the Largest and Smallest Values 
+print('') 
+print('The Largest',Largest) 
+print("") 
+print('The Lowest',Smallest) 
+print("") 
+Difference = Largest - Smallest 
+print('And the difference between the chosen goodie with highest price and the lowest price is: ',Difference) 
+ 
+ 
+Data_txt.close() 
+#print(L) 
